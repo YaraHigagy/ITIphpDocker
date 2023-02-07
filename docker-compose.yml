@@ -1,9 +1,9 @@
 version: '3.6'
 services:
   myphp:
-    image: 'php:8.1-apache'
+    image: 'itiphpimage'
     restart: always
     ports: 
-      - '7777:80'
+      - '7778:80'
     volumes:
       - './itistorage:/var/www/html'
