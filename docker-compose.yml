@@ -1,9 +1,11 @@
-version: '3.6'
+version: "3.9"
 services:
-  myphp:
-    image: 'itiphpimage'
-    restart: always
-    ports: 
-      - '7778:80'
+  web:
+    build: .
+    ports:
+      - "8088:8080"
     volumes:
-      - './itistorage:/var/www/html'
+      - ./itistorage:/var/www/html
+  myphp:
+    image: "itiphpimage"
+
