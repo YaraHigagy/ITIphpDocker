@@ -2,10 +2,12 @@ version: "3.9"
 services:
   web:
     build: .
-    ports:
-      - "8088:8080"
+    image: "itiphpimage"
+    ports: 
+      - "8088:80"
     volumes:
       - ./itistorage:/var/www/html
+    environment:
+      SITE_URL: http://localhost:8088
   myphp:
     image: "itiphpimage"
-
